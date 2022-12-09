@@ -1,5 +1,5 @@
 {% set name = "reedsolo" %}
-{% set version = "1.5.4" %}
+{% set version = "1.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b8b25cdc83478ccb06361a0e8fadc27b376a3dfabbb1dc6bb583a998a22c0127
+  sha256: 4e290d3b0a7207ac7aac186790766c752b5fcdf5e0b04dfd260349579052bbac
   patches:
     - force-cythonize.patch
 
 build:
-  number: 6
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -37,7 +37,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Pure-Python Reed Solomon encoder/decoder'
+  summary: Pure-Python Reed Solomon encoder/decoder
   dev_url: https://github.com/tomerfiliba/reedsolomon
 
 extra:
