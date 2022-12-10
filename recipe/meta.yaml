@@ -8,8 +8,6 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 4e290d3b0a7207ac7aac186790766c752b5fcdf5e0b04dfd260349579052bbac
-  patches:
-    - force-cythonize.patch
 
 build:
   number: 0
