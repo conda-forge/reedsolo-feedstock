@@ -1,5 +1,5 @@
 {% set name = "reedsolo" %}
-{% set version = "1.6.0" %}
+{% set version = "1.6.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4e290d3b0a7207ac7aac186790766c752b5fcdf5e0b04dfd260349579052bbac
+  sha256: a7ce6b0efad8df491a70b87b6ab3543e751f7700dc4ac0b12081a456ef634f5d
 
 build:
   number: 0
