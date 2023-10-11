@@ -1,11 +1,11 @@
-About reedsolo-feedstock
-========================
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/reedsolo-feedstock/blob/main/LICENSE.txt)
+About reedsolo
+==============
 
 Home: https://github.com/tomerfiliba/reedsolomon
 
 Package license: MIT
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/reedsolo-feedstock/blob/main/LICENSE.txt)
 
 Summary: Pure-Python Reed Solomon encoder/decoder
 
