@@ -1,0 +1,48 @@
+context:
+  version: "1.7.0"
+
+package:
+  name: reedsolo
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/r/reedsolo/reedsolo-${{ version }}.tar.gz
+  sha256: c1359f02742751afe0f1c0de9f0772cc113835aa2855d2db420ea24393c87732
+
+build:
+  script: python -m pip install . -vv
+  number: 4
+
+requirements:
+  build:
+    - if: build_platform != target_platform
+      then:
+        - cross-python_${{ target_platform }}
+        - cython
+        - python
+    - ${{ compiler('c') }}
+    - ${{ stdlib('c') }}
+  host:
+    - cython
+    - pip
+    - python
+    - setuptools
+  run:
+    - python
+
+tests:
+  - python:
+      imports:
+      - reedsolo
+      pip_check: true
+
+about:
+  homepage: https://github.com/tomerfiliba/reedsolomon
+  summary: 'Pure-Python Reed Solomon encoder/decoder'
+  license: MIT
+  license_file: LICENSE
+  repository: https://github.com/tomerfiliba/reedsolomon
+
+extra:
+  recipe-maintainers:
+    - m-rossi
